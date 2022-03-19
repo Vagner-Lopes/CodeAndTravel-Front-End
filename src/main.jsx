@@ -1,10 +1,12 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import App from './App'
+import React from "react";
+import ReactDOM from "react-dom";
+import Menu from "./components/Menu";
+import Footer from "./components/Footer";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Menu />
+    <Footer />
   </React.StrictMode>,
-  document.getElementById('root')
-)
+  document.getElementById("root")
+);
