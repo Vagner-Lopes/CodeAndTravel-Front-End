@@ -2,7 +2,6 @@ import React from "react";
 import Contatos from "../Pages/Contatos";
 import Destinos from "../Pages/Destinos";
 import NovoDestino from "../Pages/NovoDestino";
-import EditaDestino from "../Pages/EditaDestino";
 import DestinoById from "../Pages/DestinoById";
 import Promocoes from "../Pages/Promocoes";
 import Home from "../Pages/Home";
@@ -20,7 +19,7 @@ const Menu = () => {
         <div className="container">
           <nav className="navbar navbar-expand-lg stroke">
             <h1>
-              <a className="navbar-brand mr-lg-5" href="index.html">
+              <a className="navbar-brand mr-lg-5" href="/home">
                 Code<strong className="text-danger">&</strong>Travel
               </a>
             </h1>
@@ -93,7 +92,7 @@ const Menu = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/destinos" element={<Destinos />} />
         <Route path="/destinos/novo" element={<NovoDestino />} />
-        <Route path="/destinos/novo/:id" element={<EditaDestino />} />
+        <Route path="/destinos/novo/:id" element={<NovoDestino />} />
         <Route path="/destino/:id" element={<DestinoById />} />
         <Route path="/promocoes" element={<Promocoes />} />
         <Route path="/contatos" element={<Contatos />} />

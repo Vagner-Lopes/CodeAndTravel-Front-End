@@ -28,25 +28,26 @@ const Footer = () => {
             <div className="row">
               <div className="col-lg-6 column">
                 <div className="row">
-                  <div className="col-md-4 column">
-                    <h3 className=" text-white">Code&Travel</h3>
-                    <ul className="footer-gd-16  text-white">
-                      <li>
-                        <a href="./Home">Home</a>
+                  <div className="col-md-12 column">
+                    <a href="/home">
+                      
+                    <h3 className=" text-white">Code<strong className="text-danger">&</strong>Travel</h3>
+                    </a>
+                    <ul className="footer-gd-16  text-white d-sm-flex">
+                      <li className=" col-md-3">
+                        <a href="/home">Home</a>
                       </li>
-                      <li>
-                        <a href="./Destino">Destinos</a>
+                      <li className=" col-md-3">
+                        <a href="/destinos">Destinos</a>
                       </li>
-                      <li>
-                        <a href="./Promacoes">Promoções</a>
+                      <li className=" col-md-3">
+                        <a href="/promocoes">Promoções</a>
                       </li>
-                      <li>
-                        <a href="./Contatos">Contatos</a>
+                      <li className=" col-md-3">
+                        <a href="/contatos">Contatos</a>
                       </li>
                     </ul>
                   </div>
-                  <div className="col-md-4 column mt-md-0 mt-4"></div>
-                  <div className="col-md-4 column mt-md-0 mt-4"></div>
                 </div>
               </div>
               <div className="col-lg-6 col-md-12 column pl-lg-5 column4 mt-lg-0 mt-5">
@@ -55,7 +56,7 @@ const Footer = () => {
                   <h4>Receba as últimas notícias e ofertas.</h4>
                   <form action="" className="subscribe" method="">
                     <input type="email" name="email" placeholder="Seu e-mail*" required=""/>
-                    <button type="submit">Enviar</button>
+                    <button className=" btn-primary text-center ">Enviar</button>
                   </form>
                   <p>
                     Assine nossa Newsletter e fique por dentro das últimas
@@ -105,9 +106,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <button onClick={topFunction()} id="movetop" title="To-top">
+        <a href="#" id="movetop" title="To-top"  className="text-center">
           <span className="fa fa-angle-up"></span>
-        </button>
+        </a>
       </section>
     </footer>
   );

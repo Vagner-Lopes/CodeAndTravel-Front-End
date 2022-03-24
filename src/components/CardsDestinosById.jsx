@@ -19,9 +19,9 @@ export default function CardsDestinosById() {
 
     useEffect(() => {  
         if (id) {
-            Api.get("/destino/" + id)
+            Api.get(`/${id}`)
             .then((response) => {
-              setDestino (response.data);
+              setDestino(response.data);
             })
             .catch((error) => {
                 console.log(error);
@@ -29,10 +29,7 @@ export default function CardsDestinosById() {
         }
   }, []);
 
-  function deleteDestino(id){
-    Api.delete(`/destino/${id}`)
-    navigate("/destinos")
-  }
+
 
   console.log(destino)
   return (   
@@ -47,29 +44,29 @@ export default function CardsDestinosById() {
           <hr />
           <br />          
           <div className="row">
-            <div className="col-lg-4 col-md-4 col-12 col-sm-6 mt-md-0"  key={destino.id}>
+            <div className="col-lg-8 mt-md-0"  key={destino.id}>
               <div className="column cards-destino">
                 <Link to={`/destino/${destino.id}`}>
                     <img src={destino.imgURL} alt={"Imagem de "+ destino.nome +" "+ destino.localidade}
                       className="img-fluid" />
                   </Link>
-                <div className="info">
-                  <h4>
+                <div className="info mt-3">
+                  <h2>
                       {destino.nome}
-                  </h4>
+                  </h2>
                   <p>{destino.localidade}</p>
                   <p>{destino.diarias} Dias, {destino.diarias+1} Noites </p>
                   <div className="dst-btm">
                     <h6 className="">A partir de:</h6>
-                    <h5 className="text-danger d-inline">
+                    <h4 className="text-danger d-inline">
                         R$<span>{destino.valor}.00</span>
-                    </h5>
+                    </h4>
                   </div>
                 </div>
-                <div className="">
-                  <Link className="btn btn-info " to={`/destinos/novo/${id}`} >Editar</Link>
+                <div className="mt-3">
+                  <Link className="btn btn-style2 btn-info ml-2 mr-2" to={`/destinos`} >Voltar</Link>
                   |
-                  <button className="btn btn-danger ml-3" onClick={() => deleteDestino(destino.id)} >Excluir</button>
+                  <Link className="btn btn-style2 btn-primary ml-2 mr-2" to={`/destinos/novo/${id}`} >Editar</Link>
                 </div>
                 
               </div>

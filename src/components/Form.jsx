@@ -1,15 +1,10 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 const Form = () => {
   return (
-    <section className="w3l-contact container" id="contact">
-      <br />
-      <br />
-      <br />
-      {
-        //Contatos
-      }
-      <div className="contact-infubd py-5">
+    <section className="w3l-contact container" id="contact"><br /><br />    
+      <br /><div className="contact-infubd py-5">
         <div className="container py-lg-3">
           <div className="contact-grids row">
             <div className="col-lg-6 contact-left">
@@ -17,7 +12,7 @@ const Form = () => {
                 <div className="cont-details">
                   <h5>Fale conosco</h5>
                   <p className="mt-3 mb-4">
-                    Olá a todos, nós estamos prontos para lhe atenter 24/7 por
+                    Olá a todos, estamos prontos para lhe atenter 24/7 por
                     e-mail ou por telefone. Diga-nos em que podemo lhe ajudar?
                   </p>
                 </div>
@@ -84,7 +79,7 @@ const Form = () => {
                   ></textarea>
                 </div>
                 <div className="text-right">
-                  <button className="btn btn-style btn-primary">Enviar</button>
+                  <Link to="/home" className="btn btn-style btn-primary">Enviar</Link>
                 </div>
               </form>
             </div>
