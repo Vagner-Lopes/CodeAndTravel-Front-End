@@ -10,6 +10,7 @@ import {
   Route,
   Routes,
   NavLink,
+  Link
 } from "react-router-dom";
 
 const Menu = () => {
@@ -19,9 +20,9 @@ const Menu = () => {
         <div className="container">
           <nav className="navbar navbar-expand-lg stroke">
             <h1>
-              <a className="navbar-brand mr-lg-5" href="/home">
+              <Link to={"/"} className="navbar-brand mr-lg-5">
                 Code<strong className="text-danger">&</strong>Travel
-              </a>
+              </Link>
             </h1>
             <button
               className="navbar-toggler  collapsed bg-gradient"
@@ -38,7 +39,7 @@ const Menu = () => {
             <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item ">
-                  <NavLink className="nav-link" to="/home"
+                  <NavLink to="/" className="nav-link" 
                   style={({ isActive }) => ({ color: isActive ? '#f83e3e' : '#3e3e3e' })}>
                       Home 
                       <span className="sr-only">(current)</span>                   
@@ -89,7 +90,7 @@ const Menu = () => {
         </div>
       </header>
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" exact={"/"} element={<Home />} />
         <Route path="/destinos" element={<Destinos />} />
         <Route path="/destinos/novo" element={<NovoDestino />} />
         <Route path="/destinos/novo/:id" element={<NovoDestino />} />

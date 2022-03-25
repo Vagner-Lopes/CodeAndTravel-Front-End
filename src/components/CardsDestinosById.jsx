@@ -19,7 +19,7 @@ export default function CardsDestinosById() {
 
     useEffect(() => {  
         if (id) {
-            Api.get(`/${id}`)
+            Api.get(`/destino/${id}`)
             .then((response) => {
               setDestino(response.data);
             })

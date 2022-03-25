@@ -19,7 +19,7 @@ export default function FormDestinoNovo() {
 
     useEffect(() => {  
         if (id) {
-            Api.get(`/${id}`)
+            Api.get(`destino/${id}`)
             .then((response) => {
               setDestino (response.data);
             })
@@ -38,7 +38,7 @@ export default function FormDestinoNovo() {
   function onSubmit(ev) {
     ev.preventDefault();
     const metodo = id? 'put' : 'post';
-    Api[metodo]("/" , destino)
+    Api[metodo]("/destino", destino)
     .then((response) => {
         navigate("/destinos");
     })
@@ -48,7 +48,7 @@ export default function FormDestinoNovo() {
   }
 
   function deleteDestino(id){
-    Api.delete(`/${id}`)
+    Api.delete(`/destino/${id}`)
     navigate("/destinos")
   }
   

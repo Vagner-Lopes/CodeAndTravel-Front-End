@@ -9,7 +9,7 @@ const CardsDestinos  = () => {
   const [ destinos, setDestinos] = useState([]);
 
     useEffect(() => {  
-          Api.get(``)
+          Api.get(`/destino`)
           .then((response) => {
             setDestinos (response.data);
           })
